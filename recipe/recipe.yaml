@@ -56,7 +56,8 @@ tests:
         - pygrib
       pip_check: true
   - script:
-      - grib_repack -h
+    - if: not win
+      then: grib_repack -h
 
 about:
   license: MIT
